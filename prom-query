@@ -1,0 +1,725 @@
+Node CPU -
+
+Object
+request:Object
+url:"api/datasources/proxy/1/api/v1/query?query=sum(eagle_node_resource_usage_cpu_cores%7Bnode%3D~%22.*.*%22%2C%20node%3D~%22inf3ukpro06apvlsk002%5C%5C.paas%5C%5C.santanderuk%5C%5C.corp.*%22%7D%20%2F%20eagle_node_resource_allocatable_cpu_cores%7Bnode%3D~%22.*.*%22%2C%20node%3D~%22inf3ukpro06apvlsk002%5C%5C.paas%5C%5C.santanderuk%5C%5C.corp.*%22%7D)%20by%20(node)&time=1624611846"
+method:"GET"
+hideFromInspector:false
+response:Object
+status:"success"
+data:Object
+resultType:"vector"
+result:Array[1]
+0:Object
+metric:Object
+node:"hostname.paas.test.corp"
+value:Array[1624611840,0.577125]
+
+
+
+JSON:
+
+"columns": [],
+  "datasource": "$datasource",
+  "fontSize": "100%",
+  "gridPos": {
+    "h": 8,
+    "w": 24,
+    "x": 0,
+    "y": 10
+  },
+  "id": 14,
+  "links": [],
+  "pageSize": null,
+  "scroll": true,
+  "showHeader": true,
+  "sort": {
+    "col": 7,
+    "desc": true
+  },
+  "styles": [
+    {
+      "alias": "Time",
+      "align": "auto",
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "pattern": "Time",
+      "type": "hidden"
+    },
+    {
+      "alias": "Node",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "node",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Requested Cores",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #A",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Limit Cores",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #B",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Allocatable Cores",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #C",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "CPU Reserved",
+      "align": "auto",
+      "colorMode": "cell",
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #D",
+      "thresholds": [
+        "0.6",
+        "0.8"
+      ],
+      "type": "number",
+      "unit": "percentunit"
+    },
+    {
+      "alias": "CPU Burstable",
+      "align": "auto",
+      "colorMode": "cell",
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #E",
+      "thresholds": [
+        "1.5",
+        "3"
+      ],
+      "type": "number",
+      "unit": "percentunit"
+    },
+    {
+      "alias": "CPU Usage",
+      "align": "auto",
+      "colorMode": "cell",
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #F",
+      "thresholds": [
+        "0.4",
+        "0.6"
+      ],
+      "type": "number",
+      "unit": "percentunit"
+    },
+    {
+      "alias": "",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "decimals": 2,
+      "pattern": "/.*/",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    }
+  ],
+  "targets": [
+    {
+      "datasource": "$datasource",
+      "expr": "sum(eagle_node_resource_requests_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (node)",
+      "format": "table",
+      "instant": true,
+      "intervalFactor": 1,
+      "legendFormat": "",
+      "refId": "A"
+    },
+    {
+      "expr": "sum(eagle_node_resource_limits_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (node)",
+      "format": "table",
+      "instant": true,
+      "refId": "B"
+    },
+    {
+      "expr": "sum(eagle_node_resource_allocatable_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (node)",
+      "format": "table",
+      "instant": true,
+      "refId": "C"
+    },
+    {
+      "expr": "sum(eagle_node_resource_requests_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"} / eagle_node_resource_allocatable_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (node)",
+      "format": "table",
+      "instant": true,
+      "refId": "D"
+    },
+    {
+      "expr": "sum(eagle_node_resource_limits_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"} / eagle_node_resource_allocatable_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (node)",
+      "format": "table",
+      "instant": true,
+      "refId": "E"
+    },
+    {
+      "expr": "sum(eagle_node_resource_usage_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"} / eagle_node_resource_allocatable_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (node)",
+      "format": "table",
+      "instant": true,
+      "refId": "F"
+    }
+  ],
+  "title": "Node CPU",
+  "transform": "table",
+  "type": "table-old",
+  "fieldConfig": {
+    "defaults": {
+      "custom": {}
+    },
+    "overrides": []
+  }
+}
+
+
+Container CPU:
+--------------
+Object
+request:Object
+url:"api/datasources/proxy/1/api/v1/query?query=sum%20(eagle_pod_container_resource_limits_cpu_cores%7Bnode%3D~%22.*.*%22%2C%20node%3D~%22inf3ukpro06apvlsk002%5C%5C.paas%5C%5C.santanderuk%5C%5C.corp.*%22%7D)%20by%20(pod%2C%20container%2C%20namespace)&time=1624611923"
+method:"GET"
+hideFromInspector:false
+response:Object
+status:"success"
+data:Object
+resultType:"vector"
+result:Array[9]
+0:Object
+metric:Object
+container:"docker-cleanup"
+namespace:"day2ops"
+pod:"docker-cleanup-642w7"
+value:Array[1624611915,0]
+1:Object
+metric:Object
+container:"haproxy-exporter"
+namespace:"custom-monitoring"
+pod:"haproxy-exporter-ctc5l"
+value:Array[1624611915,0.3]
+2:Object
+metric:Object
+container:"node-exporter"
+namespace:"openshift-monitoring"
+pod:"node-exporter-6kplq"
+value:Array[1624611915,0]
+3:Object
+metric:Object
+container:"router"
+namespace:"infrastructure"
+pod:"router-intra-ukpro06a-14-zm7vj"
+value:Array[1624611915,0]
+4:Object
+metric:Object
+container:"sync"
+namespace:"openshift-node"
+pod:"sync-q9qbr"
+value:Array[1624611915,0]
+5:Object
+metric:Object
+container:"filebeat-syslog"
+namespace:"filebeat"
+pod:"filebeat-syslog-sndfb"
+value:Array[1624611915,0]
+6:Object
+metric:Object
+container:"kube-rbac-proxy"
+namespace:"openshift-monitoring"
+pod:"node-exporter-6kplq"
+value:Array[1624611915,0.02]
+7:Object
+metric:Object
+container:"openvswitch"
+namespace:"openshift-sdn"
+pod:"ovs-vjggl"
+value:Array[1624611915,0]
+8:Object
+metric:Object
+container:"sdn"
+namespace:"openshift-sdn"
+pod:"sdn-htp8p"
+value:Array[1624611915,0]
+
+JSON:
+{
+  "columns": [],
+  "datasource": "$datasource",
+  "fontSize": "100%",
+  "gridPos": {
+    "h": 7,
+    "w": 24,
+    "x": 0,
+    "y": 18
+  },
+  "id": 16,
+  "links": [],
+  "pageSize": null,
+  "scroll": true,
+  "showHeader": true,
+  "sort": {
+    "col": 6,
+    "desc": true
+  },
+  "styles": [
+    {
+      "alias": "Time",
+      "align": "auto",
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "pattern": "Time",
+      "type": "hidden"
+    },
+    {
+      "alias": "Container",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "container",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Pod",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "pod",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Requested Cores",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #A",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Limit Cores",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #B",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Usage Cores",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #C",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Namespace",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "namespace",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "decimals": 2,
+      "pattern": "/.*/",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    }
+  ],
+  "targets": [
+    {
+      "datasource": "$datasource",
+      "expr": "sum (eagle_pod_container_resource_requests_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (pod, container, namespace)",
+      "format": "table",
+      "instant": true,
+      "intervalFactor": 1,
+      "legendFormat": "",
+      "refId": "A"
+    },
+    {
+      "datasource": "$datasource",
+      "expr": "sum (eagle_pod_container_resource_limits_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (pod, container, namespace)",
+      "format": "table",
+      "instant": true,
+      "intervalFactor": 1,
+      "refId": "B"
+    },
+    {
+      "datasource": "$datasource",
+      "expr": "sum (eagle_pod_container_resource_usage_cpu_cores{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (pod, container, namespace)",
+      "format": "table",
+      "instant": true,
+      "intervalFactor": 1,
+      "refId": "C"
+    }
+  ],
+  "title": "Container CPU",
+  "transform": "table",
+  "type": "table-old",
+  "fieldConfig": {
+    "defaults": {
+      "custom": {}
+    },
+    "overrides": []
+  }
+}
+
+Container RAM:
+=============
+
+Object
+request:Object
+url:"api/datasources/proxy/1/api/v1/query?query=sum%20(eagle_pod_container_resource_limits_memory_bytes%7Bnode%3D~%22.*.*%22%2C%20node%3D~%22inf3ukpro06apvlsk002%5C%5C.paas%5C%5C.santanderuk%5C%5C.corp.*%22%7D)%20by%20(pod%2C%20container%2C%20namespace)&time=1624612020"
+method:"GET"
+hideFromInspector:false
+response:Object
+status:"success"
+data:Object
+resultType:"vector"
+result:Array[9]
+0:Object
+metric:Object
+container:"filebeat-syslog"
+namespace:"filebeat"
+pod:"filebeat-syslog-sndfb"
+value:Array[1624612020,209715200]
+1:Object
+metric:Object
+container:"openvswitch"
+namespace:"openshift-sdn"
+pod:"ovs-vjggl"
+value:Array[1624612020,0]
+2:Object
+metric:Object
+container:"router"
+namespace:"infrastructure"
+pod:"router-intra-ukpro06a-14-zm7vj"
+value:Array[1624612020,0]
+3:Object
+metric:Object
+container:"sync"
+namespace:"openshift-node"
+pod:"sync-q9qbr"
+value:Array[1624612020,0]
+4:Object
+metric:Object
+container:"docker-cleanup"
+namespace:"day2ops"
+pod:"docker-cleanup-642w7"
+value:Array[1624612020,0]
+5:Object
+metric:Object
+container:"haproxy-exporter"
+namespace:"custom-monitoring"
+pod:"haproxy-exporter-ctc5l"
+value:Array[1624612020,1073741824]
+6:Object
+metric:Object
+container:"kube-rbac-proxy"
+namespace:"openshift-monitoring"
+pod:"node-exporter-6kplq"
+value:Array[1624612020,41943040]
+7:Object
+metric:Object
+container:"node-exporter"
+namespace:"openshift-monitoring"
+pod:"node-exporter-6kplq"
+value:Array[1624612020,0]
+8:Object
+metric:Object
+container:"sdn"
+namespace:"openshift-sdn"
+pod:"sdn-htp8p"
+value:Array[1624612020,0]
+warnings:Array[1]
+0:"receive series from Addr: 10.227.232.47:10901 LabelSets: {cluster="ukpro06a", prometheus="custom-monitoring/self", prometheus_replica="prometheus-self-0"} Mint: 1623297600000 Maxt: 9223372036854775807: rpc error: code = Unknown desc = query Prometheus: request failed with code 503 Service Unavailable; msg Service Unavailable"
+
+{
+  "columns": [],
+  "datasource": "$datasource",
+  "fontSize": "100%",
+  "gridPos": {
+    "h": 7,
+    "w": 24,
+    "x": 0,
+    "y": 34
+  },
+  "id": 18,
+  "links": [],
+  "pageSize": null,
+  "scroll": true,
+  "showHeader": true,
+  "sort": {
+    "col": 6,
+    "desc": true
+  },
+  "styles": [
+    {
+      "alias": "Time",
+      "align": "auto",
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "pattern": "Time",
+      "type": "hidden"
+    },
+    {
+      "alias": "Container",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "container",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Pod",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "pod",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "Requested RAM",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #A",
+      "thresholds": [],
+      "type": "number",
+      "unit": "decbytes"
+    },
+    {
+      "alias": "Limit RAM",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #B",
+      "thresholds": [],
+      "type": "number",
+      "unit": "decbytes"
+    },
+    {
+      "alias": "Usage RAM",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "Value #C",
+      "thresholds": [],
+      "type": "number",
+      "unit": "decbytes"
+    },
+    {
+      "alias": "Namespace",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "decimals": 2,
+      "mappingType": 1,
+      "pattern": "namespace",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    },
+    {
+      "alias": "",
+      "align": "auto",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "decimals": 2,
+      "pattern": "/.*/",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    }
+  ],
+  "targets": [
+    {
+      "datasource": "$datasource",
+      "expr": "sum (eagle_pod_container_resource_requests_memory_bytes{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (pod, container, namespace)",
+      "format": "table",
+      "instant": true,
+      "intervalFactor": 1,
+      "legendFormat": "",
+      "refId": "A"
+    },
+    {
+      "datasource": "$datasource",
+      "expr": "sum (eagle_pod_container_resource_limits_memory_bytes{node=~\"$node_pool.*\", node=~\"$node.*\"}) by (pod, container, namespace)",
+      "format": "table",
+      "instant": true,
